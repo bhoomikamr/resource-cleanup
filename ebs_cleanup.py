@@ -1,12 +1,12 @@
 import boto3
 import sys
 
-ebs = boto3.client('ec2')
+ec2 = boto3.client('ec2')
 
 dry_run = '--dry-run' in sys.argv
 
 try:
-    ebs_vol = ebs.describe_volumes()
+    ebs_vol = ec2.describe_volumes()
 
 #print(ebs_vol)
 
