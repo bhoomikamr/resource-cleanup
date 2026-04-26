@@ -50,7 +50,7 @@ Automatically scans:
 
 ## Architecture
 
-```bash
+```text
 EventBridge (Weekly Schedule)
         ↓
 AWS Lambda Function
@@ -84,13 +84,13 @@ resource-cleanup/
 
 The Lambda function requires permissions for:
 
-- ```bash ec2:DescribeRegions ```
-- ```bash ec2:DescribeAddresses ```
-- ```bash ec2:ReleaseAddress ```
-- ```bash ec2:DescribeVolumes ```
-- ```bash ec2:DeleteVolume ```
-- ```bash ec2:DescribeSnapshots ```
-- ```bash ec2:DeleteSnapshot ```
+- `ec2:DescribeRegions`
+- `ec2:DescribeAddresses`
+- `ec2:ReleaseAddress`
+- `ec2:DescribeVolumes`
+- `ec2:DeleteVolume`
+- `ec2:DescribeSnapshots`
+- `ec2:DeleteSnapshot`
 - CloudWatch logging permissions
 
 ## Deployment with Terraform
