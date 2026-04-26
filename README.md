@@ -10,7 +10,7 @@ The solution identifies and optionally removes:
 - Unattached EBS volumes
 - Orphaned EBS snapshots
 
-The project started with individual Python cleanup scripts and was later consolidated into a centralized AWS Lambda function deployed using Terraform.
+The project started with individual Python cleanup scripts and was later consolidated into a centralized AWS Lambda function deployed using Terraform.The final production version is implemented in `lambda_function.py`.
 
 ---
 
@@ -95,19 +95,19 @@ The Lambda function requires permissions for:
 
 ## Deployment with Terraform
 
-## Initialize Terraform
+### Initialize Terraform
 ```bash
 terraform init
 ```
-## Review changes
+### Review changes
 ```bash
 terraform plan
 ```
-## Deploy resources
+### Deploy resources
 ```bash
 terraform apply
 ```
-## Terraform creates:
+### Terraform creates:
 
 - Lambda execution role
 - IAM policy
@@ -122,21 +122,21 @@ DRY_RUN=true
 ## Values
 
 Value | Behavior
-|-----|---------|
-| true | Only logs resources |
-| false | Deletes resources |
+|-----|----------|
+| true  | Only logs resources |
+| false | Deletes resources   |
 
 ## Running Individual Scripts
 
-## EIP cleanup
+### EIP cleanup
 ```bash
 python aws_eip.py --dry-run
 ```
-## EBS cleanup
+### EBS cleanup
 ```bash
 python ebs_cleanup.py --dry-run
 ```
-## Snapshot cleanup
+### Snapshot cleanup
 ```bash
 python ebs_snapshots.py --dry-run
 ```
