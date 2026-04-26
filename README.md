@@ -10,7 +10,7 @@ The solution identifies and optionally removes:
 - Unattached EBS volumes
 - Orphaned EBS snapshots
 
-The project started with individual Python cleanup scripts and was later consolidated into a centralized AWS Lambda function deployed using Terraform.The final production version is implemented in `lambda_function.py`.
+The project was developed incrementally, starting with standalone Python cleanup scripts and later consolidated into a centralized AWS Lambda solution deployed with Terraform, with `lambda_function.py` serving as the primary entry point.
 
 ---
 
@@ -121,8 +121,8 @@ DRY_RUN=true
 ```
 ## Values
 
-Value | Behavior
-|-----|----------|
+| Value | Behavior |
+|-------|----------|
 | true  | Only logs resources |
 | false | Deletes resources   |
 
