@@ -17,17 +17,17 @@ The project was developed incrementally, starting with standalone Python cleanup
 ## Features
 
 ### Elastic IP Cleanup
-Detects and removes:
+Identifies and optionally removes:
 - Allocated but unassociated Elastic IPs
 - Idle public IP addresses that incur AWS charges
 
 ### EBS Volume Cleanup
-Detects and removes:
+Identifies and optionally removes:
 - Volumes in `available` state
 - Unattached EBS storage volumes
 
 ### Snapshot Cleanup
-Detects and removes:
+Identifies and optionally removes:
 - Snapshots not linked to any existing EBS volume
 - Old orphaned snapshots
 
@@ -37,7 +37,8 @@ Includes:
 - Tag-based exclusion using:
 
 ```bash
-Keep=true
+Key: `Keep`
+Value: `true`
 ```
 Resources with a Keep tag will not be deleted.
 
